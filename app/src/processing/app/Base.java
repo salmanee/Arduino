@@ -48,6 +48,7 @@ import processing.app.debug.TargetBoard;
 import processing.app.debug.TargetPackage;
 import processing.app.debug.TargetPlatform;
 import processing.app.helpers.*;
+import processing.app.helpers.OSUtils;
 import processing.app.helpers.filefilters.OnlyDirs;
 import processing.app.helpers.filefilters.OnlyFilesWithExtension;
 import processing.app.javax.swing.filechooser.FileNameExtensionFilter;
@@ -935,7 +936,10 @@ public class Base {
       storeSketches();
 
       // This will store the sketch count as zero
+      editor.setVisible(false);
+      //editor.dispose();
       editors.remove(editor);
+
       try {
         Editor.serialMonitor.close();
       } catch (Exception e) {
@@ -946,9 +950,10 @@ public class Base {
       // Save out the current prefs state
       PreferencesData.save();
 
-      // Since this wasn't an actual Quit event, call System.exit()
-      System.exit(0);
-
+      // Since this wasn't an actual Quit event, call System.exit() (not on OSX)
+      if (!OSUtils.isMacOS()) {
+        System.exit(0);
+      }
     } else {
       // More than one editor window open,
       // proceed with closing the current window.
