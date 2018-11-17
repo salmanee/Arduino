@@ -34,8 +34,8 @@ public class PApplet {
    * since Processing only uses floats, it's safer for this to be a float
    * because there's no good way to specify a double with the preproc.
    */
-  public static final float javaVersion =
-    new Float(javaVersionName.substring(0, 3)).floatValue();
+  public static final float javaVersion = 11;
+    // new Float(javaVersionName.substring(0, 3)).floatValue();
 
   /**
    * Current platform in use, one of the
