@@ -23,7 +23,7 @@
 package processing.app.macosx;
 
 import cc.arduino.packages.BoardPort;
-import com.apple.eio.FileManager;
+//import com.apple.eio.FileManager;
 import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecutor;
 import org.apache.commons.exec.Executor;
@@ -37,6 +37,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.net.URI;
 import java.util.LinkedList;
 import java.util.List;
@@ -77,13 +78,15 @@ public class Platform extends processing.app.Platform {
 
   @Override
   public File getSettingsFolder() throws Exception {
-    return new File(getLibraryFolder(), "Arduino15");
+    return new File(System.getProperty("user.home")+File.separator+"Library", "Arduino15");
+    //return new File(getLibraryFolder(), "Arduino15");
   }
 
 
   @Override
   public File getDefaultSketchbookFolder() throws Exception {
-    return new File(getDocumentsFolder(), "Arduino");
+    return new File(System.getProperty("user.home")+File.separator+"Documents", "Arduino");
+    //return new File(getDocumentsFolder(), "Arduino");
     /*
     // looking for /Users/blah/Documents/Processing
     try {
@@ -107,6 +110,24 @@ public class Platform extends processing.app.Platform {
     } else {
       desktop.open(new File(url));
     }
+
+//    try {
+//      Class<?> desktopClass = Class.forName("java.awt.Desktop");
+//      Method getMethod = desktopClass.getMethod("getDesktop");
+//      Object desktop = getMethod.invoke(null, new Object[] { });
+//
+//      if (url.startsWith("http") || url.startsWith("file:")) {
+//        Method browseMethod =
+//          desktopClass.getMethod("browse", new Class[] { URI.class });
+//        browseMethod.invoke(desktop, new Object[] { new URI(url) });
+//      } else {
+//        Method openMethod =
+//          desktopClass.getMethod("open", new Class[] { File.class });
+//        openMethod.invoke(desktop, new Object[] { new File(url) });
+//      }
+//    } catch (Exception e) {
+//      e.printStackTrace();
+//    }
   }
 
 
@@ -152,14 +173,14 @@ public class Platform extends processing.app.Platform {
   //   /Versions/Current/Frameworks/CarbonCore.framework/Headers/
 
 
-  private String getLibraryFolder() throws FileNotFoundException {
-    return FileManager.findFolder(kUserDomain, kDomainLibraryFolderType);
-  }
-
-
-  private String getDocumentsFolder() throws FileNotFoundException {
-    return FileManager.findFolder(kUserDomain, kDocumentsFolderType);
-  }
+//  private String getLibraryFolder() throws FileNotFoundException {
+//    return FileManager.findFolder(kUserDomain, kDomainLibraryFolderType);
+//  }
+//
+//
+//  private String getDocumentsFolder() throws FileNotFoundException {
+//    return FileManager.findFolder(kUserDomain, kDocumentsFolderType);
+//  }
 
   @Override
   public String getName() {

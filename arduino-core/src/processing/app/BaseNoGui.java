@@ -25,6 +25,7 @@ import processing.app.packages.UserLibraryFolder.Location;
 import cc.arduino.files.DeleteFilesOnShutdown;
 import processing.app.helpers.FileUtils;
 
+
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.File;
@@ -33,6 +34,8 @@ import java.io.IOException;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import java.awt.Desktop;
 
 import cc.arduino.packages.BoardPort;
 
@@ -513,12 +516,16 @@ public class BaseNoGui {
   static protected void initPlatform() {
     try {
       Class<?> platformClass = Class.forName("processing.app.Platform");
+      //Class<?> platformClass = Class.forName("java.awt.Desktop");
       if (OSUtils.isMacOS()) {
         platformClass = Class.forName("processing.app.macosx.Platform");
+        //platformClass = Class.forName("java.awt.Desktop");
       } else if (OSUtils.isWindows()) {
         platformClass = Class.forName("processing.app.windows.Platform");
+        //platformClass = Class.forName("java.awt.Desktop");
       } else if (OSUtils.isLinux()) {
         platformClass = Class.forName("processing.app.linux.Platform");
+        //platformClass = Class.forName("java.awt.Desktop");
       }
       platform = (Platform) platformClass.newInstance();
     } catch (Exception e) {
