@@ -1,0 +1,44 @@
+open module arduinocore {
+    requires commons.compress;
+    requires apple;
+    requires bcprov.jdk15on;
+    requires commons.codec;
+    requires commons.exec;
+    requires commons.lang3;
+    requires commons.logging;
+    requires commons.net;
+    requires com.fasterxml.jackson.annotation;
+    requires com.fasterxml.jackson.core;
+    requires com.fasterxml.jackson.databind;
+    requires bcpg.jdk15on;
+    requires com.fasterxml.jackson.module.mrbean;
+    requires java.semver;
+    requires jmdns;
+    requires jna;
+    // requires jna.platform;
+    requires jsch;
+    requires jssc;
+    requires slf4j.api;
+    requires slf4j.simple;
+    requires java.desktop;
+    requires java.logging;
+    requires java.scripting;
+    // requires java.base;
+
+    exports processing.app.helpers;
+    exports processing.app;
+    exports cc.arduino;
+    exports cc.arduino.packages;
+    exports cc.arduino.packages.uploaders;
+    exports processing.app.debug;
+    exports processing.app.legacy;
+    exports cc.arduino.contributions;
+    exports cc.arduino.contributions.libraries;
+    exports cc.arduino.contributions.packages;
+    exports cc.arduino.files;
+    exports processing.app.helpers.filefilters;
+    exports processing.app.packages;
+    exports cc.arduino.packages.ssh;
+    exports cc.arduino.i18n;
+    exports cc.arduino.utils;
+}
