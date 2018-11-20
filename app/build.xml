@@ -79,7 +79,7 @@
 	   encoding="UTF-8"
 	   includeAntRuntime="false"
 	   debug="true"
-	   classpathref="class.path" />
+	   modulepathref="class.path" />
   </target>
 
   <target name="test" depends="compile" description="Runs the test">
@@ -91,7 +91,7 @@
            encoding="UTF-8"
            includeAntRuntime="false"
            debug="true"
-           classpathref="class.path.test">
+           modulepathref="class.path.test">
     </javac>
 
     <copy todir="test-bin" overwrite="true" verbose="true">

@@ -36,7 +36,7 @@
            encoding="UTF-8"
            includeAntRuntime="false"
            srcdir="src"
-           classpathref="class.path"
+           modulepathref="class.path"
            debug="true"
            destdir="bin">
     </javac>
