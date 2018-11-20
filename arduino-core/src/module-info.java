@@ -41,4 +41,8 @@ open module arduinocore {
     exports cc.arduino.packages.ssh;
     exports cc.arduino.i18n;
     exports cc.arduino.utils;
+    exports processing.app.macosx;
+    exports processing.app.windows;
+    exports processing.app.linux;
+    exports cc.arduino.net;
 }

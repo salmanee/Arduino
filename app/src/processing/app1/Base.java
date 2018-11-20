@@ -116,13 +116,13 @@ public class Base {
   static public String librariesClassPath;
 
   // Location for untitled items
-  static File untitledFolder;
+  static public File untitledFolder;
 
   // p5 icon for the window
 //  static Image icon;
 
   //  int editorCount;
-  List<Editor> editors = Collections.synchronizedList(new ArrayList<Editor>());
+  public List<Editor> editors = Collections.synchronizedList(new ArrayList<Editor>());
   Editor activeEditor;
 
   // these menus are shared so that the board and serial port selections

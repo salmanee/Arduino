@@ -551,7 +551,7 @@ public class EditorTab extends JPanel implements SketchFile.TextStorage, MouseWh
     textarea.selectAll();
   }
 
-  void handleCommentUncomment() {
+  public void handleCommentUncomment() {
     Action action = textarea.getActionMap().get(RSyntaxTextAreaEditorKit.rstaToggleCommentAction);
     action.actionPerformed(null);
     // XXX: RSyntaxDocument doesn't fire DocumentListener events, it should be fixed in RSyntaxTextArea?
@@ -567,7 +567,7 @@ public class EditorTab extends JPanel implements SketchFile.TextStorage, MouseWh
     new DiscourseFormat(editor, this, true).show();
   }
 
-  void handleIndentOutdent(boolean indent) {
+  public void handleIndentOutdent(boolean indent) {
     if (indent) {
       Action action = textarea.getActionMap().get(SketchTextAreaEditorKit.rtaIncreaseIndentAction);
       action.actionPerformed(null);

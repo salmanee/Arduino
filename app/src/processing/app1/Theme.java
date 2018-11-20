@@ -330,7 +330,7 @@ public class Theme {
    */
   static private ZippedTheme zipTheme;
   
-  static protected void init() {
+  static public void init() {
     zipTheme = openZipTheme();
 
     try {

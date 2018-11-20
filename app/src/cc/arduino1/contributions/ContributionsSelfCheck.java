@@ -130,7 +130,7 @@ public class ContributionsSelfCheck extends TimerTask {
       .anyMatch(new UpdatablePlatformPredicate());
   }
 
-  static boolean checkForUpdatableLibraries() {
+  static public boolean checkForUpdatableLibraries() {
     return BaseNoGui.librariesIndexer.getIndex().getLibraries().stream()
       .anyMatch(new UpdatableLibraryPredicate());
   }

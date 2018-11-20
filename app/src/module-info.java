@@ -45,5 +45,11 @@ open module app {
     requires java.logging;
     requires java.scripting;
 
+    exports processing.app1.syntax;
+    exports processing.app1;
+    exports processing.app1.tools;
+    exports cc.arduino1.contributions.libraries;
+    exports cc.arduino1.contributions;
+
     // requires java.base;
 }

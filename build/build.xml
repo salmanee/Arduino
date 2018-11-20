@@ -808,7 +808,7 @@
 
   <target name="linux32-run" depends="build,start"/>
 
-  <target name="linux64-run" depends="build,start"/>
+  <target name="linux64-run" depends="start"/>
 
   <target name="linuxarm-run" depends="build,start"/>
 
