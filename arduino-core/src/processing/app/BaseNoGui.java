@@ -93,7 +93,7 @@ public class BaseNoGui {
   // XXX: Remove this field
   static private List<UserLibraryFolder> librariesFolders;
 
-  static UserNotifier notifier = new BasicUserNotifier();
+  static public UserNotifier notifier = new BasicUserNotifier();
 
   static public Map<String, TargetPackage> packages;
 
@@ -455,7 +455,7 @@ public class BaseNoGui {
     return list;
   }
 
-  protected static void dumpPrefs(CommandlineParser parser) {
+  public static void dumpPrefs(CommandlineParser parser) {
     if (parser.getGetPref() != null) {
       String value = PreferencesData.get(parser.getGetPref(), null);
       if (value != null) {
@@ -513,7 +513,7 @@ public class BaseNoGui {
     }
   }
 
-  static protected void initPlatform() {
+  static public void initPlatform() {
     try {
       Class<?> platformClass = Class.forName("processing.app.Platform");
       //Class<?> platformClass = Class.forName("java.awt.Desktop");

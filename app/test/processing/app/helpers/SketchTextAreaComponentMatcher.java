@@ -31,7 +31,7 @@
 package processing.app.helpers;
 
 import org.fest.swing.core.ComponentMatcher;
-import processing.app.syntax.SketchTextArea;
+import processing.app1.syntax.SketchTextArea;
 
 import java.awt.*;
 

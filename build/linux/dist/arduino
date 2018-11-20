@@ -32,5 +32,5 @@ if [[ "$@" != *"--"* ]] ; then
 	JAVA_OPTIONS+=("-splash:$APPDIR/lib/splash.png")
 fi
 
-"$JAVA" "${JAVA_OPTIONS[@]}" processing.app.Base "$@"
+"$JAVA" "${JAVA_OPTIONS[@]}" processing.app1.Base "$@"
 

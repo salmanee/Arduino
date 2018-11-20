@@ -1,5 +1,6 @@
 package cc.arduino.contributions.libraries;
 
+import cc.arduino1.contributions.libraries.LibraryTypeComparator;
 import org.junit.Test;
 
 import java.util.Arrays;

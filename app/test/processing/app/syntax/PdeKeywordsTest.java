@@ -32,6 +32,8 @@ package processing.app.syntax;
 import org.fife.ui.rsyntaxtextarea.TokenTypes;
 import org.junit.Test;
 import processing.app.AbstractWithPreferencesTest;
+import processing.app1.syntax.PdeKeywords;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 

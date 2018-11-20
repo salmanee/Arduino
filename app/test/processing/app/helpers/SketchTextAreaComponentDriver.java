@@ -34,7 +34,7 @@ import org.fest.swing.core.Robot;
 import org.fest.swing.driver.JComponentDriver;
 import org.fest.swing.edt.GuiActionRunner;
 import org.fest.swing.edt.GuiQuery;
-import processing.app.syntax.SketchTextArea;
+import processing.app1.syntax.SketchTextArea;
 
 public class SketchTextAreaComponentDriver extends JComponentDriver {
 

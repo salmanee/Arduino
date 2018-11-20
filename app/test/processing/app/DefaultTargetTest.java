@@ -35,6 +35,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import processing.app.debug.TargetBoard;
+import processing.app1.Base;
+
 import static org.junit.Assert.assertNotEquals;
 
 public class DefaultTargetTest extends AbstractWithPreferencesTest {

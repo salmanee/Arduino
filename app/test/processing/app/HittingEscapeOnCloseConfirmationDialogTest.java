@@ -34,6 +34,7 @@ import org.fest.swing.finder.WindowFinder;
 import org.fest.swing.fixture.DialogFixture;
 import org.junit.Test;
 import processing.app.helpers.SketchTextAreaFixture;
+import processing.app1.EditorConsole;
 
 import javax.swing.*;
 import java.awt.event.KeyEvent;

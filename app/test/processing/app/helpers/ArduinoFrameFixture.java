@@ -30,8 +30,8 @@
 package processing.app.helpers;
 
 import org.fest.swing.fixture.FrameFixture;
-import processing.app.Editor;
-import processing.app.syntax.SketchTextArea;
+import processing.app1.Editor;
+import processing.app1.syntax.SketchTextArea;
 
 public class ArduinoFrameFixture extends FrameFixture {
 

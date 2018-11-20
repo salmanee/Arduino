@@ -35,6 +35,7 @@ import org.fest.swing.fixture.JMenuItemFixture;
 import org.junit.Test;
 
 import processing.app.helpers.SketchTextAreaFixture;
+import processing.app1.EditorConsole;
 
 public class ReduceIndentWith1CharOnLastLineTest extends AbstractGUITest {
 

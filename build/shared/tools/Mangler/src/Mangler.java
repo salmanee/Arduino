@@ -23,13 +23,10 @@
 package com.transformers.supermangletron;
 
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import javax.swing.JOptionPane;
 
-import processing.app.Editor;
-import processing.app.tools.Tool;
+import processing.app1.Editor;
+import processing.app1.tools.Tool;
 
 
 

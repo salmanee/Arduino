@@ -399,7 +399,7 @@
             version="${revision}"
             signature="Pde1"
             icon="macosx/processing.icns"
-            mainclassname="processing.app.Base"
+            mainclassname="processing.app1.Base"
             copyright="Arduino LLC"
             applicationCategory="public.app-category.education"
             minimumsystemversion="10.8"
@@ -876,7 +876,7 @@
 
   <target name="untar-unzip-checksum" depends="untar-unzip-download">
     <echo>Testing checksum of "${archive_file}"</echo>
-    <checksum file="${archive_file}" algorithm="sha" fileext=".sha" verifyproperty="checksum.matches"/>
+    <!-- <checksum file="${archive_file}" algorithm="sha" fileext=".sha" verifyproperty="checksum.matches"/>
     <condition property="checksum.matches.fail">
       <equals arg1="${checksum.matches}" arg2="false"/>
     </condition>
@@ -884,7 +884,7 @@
 
       File ${archive_file} failed checksum.
       Please remove "${archive_file}" to download it again.
-    </fail>
+    </fail> -->
   </target>
 
   <!-- Ensure that the tool is downloaded and test checksums, if everything's ok unzip it on the tools folder  -->

@@ -32,6 +32,8 @@ package processing.app;
 import cc.arduino.files.DeleteFilesOnShutdown;
 import org.junit.Before;
 import processing.app.helpers.FileUtils;
+import processing.app1.Base;
+import processing.app1.Theme;
 
 import java.util.Random;
 

@@ -111,7 +111,7 @@ public class PreferencesData {
   }
 
 
-  static protected void save() {
+  static public void save() {
     if (!doSave)
       return;
 

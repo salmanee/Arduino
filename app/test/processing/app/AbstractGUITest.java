@@ -37,6 +37,8 @@ import org.junit.After;
 import org.junit.Before;
 import processing.app.helpers.ArduinoFrameFixture;
 import processing.app.helpers.FileUtils;
+import processing.app1.Base;
+import processing.app1.Theme;
 
 import javax.swing.*;
 import java.util.Random;

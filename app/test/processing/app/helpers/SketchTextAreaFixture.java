@@ -32,7 +32,7 @@ package processing.app.helpers;
 
 import org.fest.swing.core.Robot;
 import org.fest.swing.fixture.ComponentFixture;
-import processing.app.syntax.SketchTextArea;
+import processing.app1.syntax.SketchTextArea;
 
 public class SketchTextAreaFixture extends ComponentFixture {
 

@@ -49,7 +49,7 @@ public class Sketch {
    * @param file
    *          Any file inside the sketch directory.
    */
-  Sketch(File file) throws IOException {
+  public Sketch(File file) throws IOException {
     folder = file.getParentFile();
     files = listSketchFiles(true);
   }
@@ -190,7 +190,7 @@ public class Sketch {
     return buildPath;
   }
 
-  protected void removeFile(SketchFile which) {
+  public void removeFile(SketchFile which) {
     if (!files.remove(which))
       System.err.println("removeCode: internal error.. could not find code");
   }
@@ -372,7 +372,7 @@ public class Sketch {
   /**
    * Deletes this entire sketch from disk.
    */
-  void delete() {
+  public void delete() {
     FileUtils.recursiveDelete(folder);
   }
 }

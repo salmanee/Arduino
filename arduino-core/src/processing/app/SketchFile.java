@@ -120,17 +120,17 @@ public class SketchFile {
     return primary;
   }
 
-  protected boolean fileExists() {
+  public boolean fileExists() {
     return file.exists();
   }
 
 
-  protected boolean fileReadOnly() {
+  public boolean fileReadOnly() {
     return !file.canWrite();
   }
 
 
-  protected boolean delete(Path tempBuildFolder) throws IOException {
+  public boolean delete(Path tempBuildFolder) throws IOException {
     if (!file.delete()) {
       return false;
     }

@@ -42,6 +42,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import processing.app.helpers.FileUtils;
+import processing.app1.tools.ZipDeflater;
 
 public class ZipDeflaterTest {
 

@@ -8,6 +8,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import cc.arduino1.contributions.ContributionsSelfCheck;
 import org.junit.Test;
 
 import cc.arduino.contributions.libraries.ContributedLibrary;
@@ -43,7 +44,7 @@ public class UpdatableLibraryTest {
     assertTrue("SD lib is installed", sdLib.isLibraryInstalled());
     assertEquals("SD installed version", "1.1.1", sdLib.getParsedVersion());
 
-    assertTrue(ContributionsSelfCheck.checkForUpdatableLibraries());
+    assertTrue(cc.arduino1.contributions.ContributionsSelfCheck.checkForUpdatableLibraries());
 
     folders.add(new UserLibraryFolder(SD121, Location.SKETCHBOOK));
     indexer.setLibrariesFolders(folders);
@@ -52,7 +53,7 @@ public class UpdatableLibraryTest {
     assertTrue("SD lib is installed", sdLib.isLibraryInstalled());
     assertEquals("SD installed version", "1.2.1", sdLib.getParsedVersion());
 
-    assertFalse(ContributionsSelfCheck.checkForUpdatableLibraries());
+    assertFalse(cc.arduino1.contributions.ContributionsSelfCheck.checkForUpdatableLibraries());
   }
 
   @Test
@@ -70,7 +71,7 @@ public class UpdatableLibraryTest {
     assertTrue("Bridge lib is installed", l.isLibraryInstalled());
     assertEquals("Bridge installed version", "1.6.3", l.getParsedVersion());
 
-    assertTrue(ContributionsSelfCheck.checkForUpdatableLibraries());
+    assertTrue(cc.arduino1.contributions.ContributionsSelfCheck.checkForUpdatableLibraries());
 
     folders.add(new UserLibraryFolder(Bridge170, Location.SKETCHBOOK));
     indexer.setLibrariesFolders(folders);
