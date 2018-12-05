@@ -1,4 +1,4 @@
-open module arduinocore {
+module arduinocore {
     requires commons.compress;
     requires apple;
     requires bcprov.jdk15on;
@@ -25,24 +25,24 @@ open module arduinocore {
     requires java.scripting;
     // requires java.base;
 
-    exports processing.app.helpers;
-    exports processing.app;
-    exports cc.arduino;
-    exports cc.arduino.packages;
-    exports cc.arduino.packages.uploaders;
-    exports processing.app.debug;
-    exports processing.app.legacy;
-    exports cc.arduino.contributions;
-    exports cc.arduino.contributions.libraries;
-    exports cc.arduino.contributions.packages;
-    exports cc.arduino.files;
-    exports processing.app.helpers.filefilters;
-    exports processing.app.packages;
-    exports cc.arduino.packages.ssh;
-    exports cc.arduino.i18n;
-    exports cc.arduino.utils;
-    exports processing.app.macosx;
-    exports processing.app.windows;
-    exports processing.app.linux;
-    exports cc.arduino.net;
+    exports processing.app.helpers to app, test;
+    exports processing.app to app, test;
+    exports cc.arduino to app, test;
+    exports cc.arduino.packages to app, test;
+    exports cc.arduino.packages.uploaders to app, test;
+    exports processing.app.debug to app, test;
+    exports processing.app.legacy to app;
+    exports cc.arduino.contributions to app, test;
+    exports cc.arduino.contributions.libraries to app, test;
+    exports cc.arduino.contributions.packages to app, test;
+    exports cc.arduino.files to app, test;
+    exports processing.app.helpers.filefilters to app;
+    exports processing.app.packages to app, test;
+    exports cc.arduino.packages.ssh to app;
+    exports cc.arduino.i18n to app, test;
+    exports cc.arduino.utils to app, test;
+    exports processing.app.macosx to app, test;
+    exports processing.app.windows to app, test;
+    exports processing.app.linux to app, test;
+    exports cc.arduino.net to app, test;
 }

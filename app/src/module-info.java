@@ -1,4 +1,4 @@
-open module app {
+module app {
     requires commons.compress;
     requires apple;
     requires batik;
@@ -43,13 +43,13 @@ open module app {
     requires java.desktop;
     requires arduinocore;
     requires java.logging;
-    requires java.scripting;
+    // requires java.scripting;
 
-    exports processing.app1.syntax;
-    exports processing.app1;
-    exports processing.app1.tools;
-    exports cc.arduino1.contributions.libraries;
-    exports cc.arduino1.contributions;
+    exports processing.app1.syntax to test;
+    exports processing.app1 to test;
+    exports processing.app1.tools to test;
+    exports cc.arduino1.contributions.libraries to test;
+    exports cc.arduino1.contributions to test;
 
     // requires java.base;
 }

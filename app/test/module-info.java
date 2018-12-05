@@ -1,4 +1,4 @@
-open module test {
+module test {
   requires fest.reflect;
   requires fest.swing;
   requires fest.util;
